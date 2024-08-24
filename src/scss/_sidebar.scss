@@ -1,0 +1,7 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+
+.sidebar {
+	width: 200px;
+	border-right: 1px solid variables.$accent;
+	height: 100%;
+}

@@ -1,0 +1,18 @@
+.navbar {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	.logo {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		font-size: 24px;
+	}
+	.elements {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}

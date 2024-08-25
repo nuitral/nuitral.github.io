@@ -5,7 +5,9 @@ const Docs = () => {
 	return (
 		<div className="docs">
 			<Sidebar></Sidebar>
-			<Outlet></Outlet>
+			<div className="docWrapper">
+				<Outlet></Outlet>
+			</div>
 		</div>
 	)
 }

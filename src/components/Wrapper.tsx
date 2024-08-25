@@ -4,6 +4,7 @@ import Docs from '../pages/Docs.tsx'
 import About from '../pages/About.tsx'
 import Icons from '../pages/docsPages/Icons.tsx'
 import Button from '../pages/docsPages/Button.tsx'
+import Colors from '../pages/docsPages/Colors.tsx'
 
 const Wrapper = () => {
 	return (
@@ -11,6 +12,7 @@ const Wrapper = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/docs/*" element={<Docs />}>
+					<Route path="colors" element={<Colors />} />
 					<Route path="icons" element={<Icons />} />
 					<Route path="button" element={<Button />} />
 				</Route>

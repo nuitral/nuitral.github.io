@@ -10,8 +10,21 @@ const Sidebar = () => {
 	return (
 		<>
 			<div className="sidebar">
-				<div onClick={() => navigateTo('/icons')}>Icons</div>
-				<div onClick={() => navigateTo('/button')}>Button</div>
+				<div className="title">How to start</div>
+				<div className="section" onClick={() => navigateTo('/howToInstall')}>
+					Install Nuitral
+				</div>
+				<div className="title">Essentialt</div>
+				<div className="section" onClick={() => navigateTo('/colors')}>
+					Colors
+				</div>
+				<div className="section" onClick={() => navigateTo('/icons')}>
+					Icons
+				</div>
+				<div className="title">Components</div>
+				<div className="section" onClick={() => navigateTo('/button')}>
+					Button
+				</div>
 			</div>
 		</>
 	)

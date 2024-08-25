@@ -1,0 +1,18 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+
+.divider {
+	height: 0.05rem;
+	margin: 1rem 0 0 0;
+	background-color: variables.$secondary;
+	width: 100%;
+}
+
+.text-description-head {
+	padding: 1rem 0;
+	font-size: 20px;
+}
+
+.text-description {
+	padding: 1rem 0;
+	font-size: 16px;
+}

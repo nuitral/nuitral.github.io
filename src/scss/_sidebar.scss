@@ -4,4 +4,14 @@
 	width: 200px;
 	border-right: 1px solid variables.$accent;
 	height: 100%;
+	padding-right: 1rem;
+	.title {
+		font-weight: 600;
+		&:not(:first-child) {
+			padding-top: 0.5rem;
+		}
+	}
+	.section {
+		cursor: pointer;
+	}
 }

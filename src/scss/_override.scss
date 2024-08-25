@@ -1,0 +1,19 @@
+pre.language-javascript {
+	border: 1px solid;
+	border-radius: 8px;
+	background: transparent;
+}
+
+code.language-javascript {
+	text-shadow: none !important;
+}
+
+span.token.operator {
+	background: transparent;
+}
+
+.nuitral-dark-mode {
+	.language-javascript {
+		color: white;
+	}
+}

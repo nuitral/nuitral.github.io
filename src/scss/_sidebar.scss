@@ -2,9 +2,9 @@
 
 .sidebar {
 	width: 200px;
-	border-right: 1px solid variables.$accent;
 	height: 100%;
 	padding-right: 1rem;
+	transition: all 0.3s ease;
 	.title {
 		font-weight: 600;
 		&:not(:first-child) {
@@ -13,5 +13,35 @@
 	}
 	.section {
 		cursor: pointer;
+	}
+
+	.routes-section {
+		display: none;
+	}
+
+	@media (max-width: 480px) {
+		.routes-section {
+			display: block;
+		}
+
+		& {
+			width: 0;
+			padding: 1rem;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			z-index: 1000;
+			transition: all 0.3s ease;
+		}
+
+		&.open {
+			background-color: variables.$background;
+			-webkit-backdrop-filter: blur(16px);
+			backdrop-filter: blur(16px);
+			width: 100%;
+			left: 0;
+			box-sizing: border-box;
+			z-index: 1000;
+		}
 	}
 }

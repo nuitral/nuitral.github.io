@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
 	const { manageDarkMode, hasDarkTheme, manageTheme } = useNuitralTheming({
 		theme: 'nuitral',
-		darkMode: false,
+		darkMode: true,
 		id: 'demo-app',
 	})
 	const navigate = useNavigate()
@@ -13,6 +13,8 @@ const Navbar = () => {
 	const navigateTo = (path: string) => {
 		navigate(path)
 	}
+
+	const sidebarRef = document.getElementsByClassName('sidebar')
 
 	const [theme, setTheme] = useState('nuitral')
 
@@ -22,8 +24,21 @@ const Navbar = () => {
 		manageTheme(newTheme)
 	}
 
+	const openSidebar = () => {
+		if (sidebarRef.length > 0) {
+			sidebarRef[0].classList.add('open')
+		}
+	}
+
 	return (
 		<div className="navbar">
+			<div className="sidebar-toggle" onClick={() => openSidebar()}>
+				<div className="hamburger-menu">
+					<div className="bar"></div>
+					<div className="bar"></div>
+					<div className="bar"></div>
+				</div>
+			</div>
 			<div className="logo">nuitral</div>
 			<div className="elements">
 				<div onClick={() => navigateTo('/')}>Home</div>

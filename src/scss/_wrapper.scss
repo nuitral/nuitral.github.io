@@ -1,7 +1,13 @@
 .wrapper {
+	display: flex;
 	padding: 0.5rem 1rem;
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
 	overflow-y: auto;
+
+	.router-container {
+		flex-grow: 1;
+		overflow-x: hidden;
+	}
 }

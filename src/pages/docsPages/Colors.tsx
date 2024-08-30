@@ -1,5 +1,5 @@
 const Colors = () => {
-return <>Colors</>
+	return <>Colors</>
 }
 
-export default Colors;
+export default Colors

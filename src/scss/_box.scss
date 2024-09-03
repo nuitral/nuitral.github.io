@@ -1,0 +1,20 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+.box {
+	padding: 1rem;
+	border: 1px solid variables.$primary-700;
+	border-radius: 10px;
+	width: 100%;
+	background: transparent;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+
+	.box-title {
+		font-size: 1.25rem;
+		margin-bottom: 10px;
+	}
+
+	&:hover {
+		background: variables.$primary-300;
+		color: variables.$primary-800;
+	}
+}

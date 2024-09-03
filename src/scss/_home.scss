@@ -1,0 +1,47 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+.home-title {
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+.home-subtitle {
+	font-size: 1.5rem;
+	color: variables.$primary-700;
+	font-weight: 400;
+}
+
+.home-description {
+	font-size: 1.25rem;
+	color: variables.$primary-700;
+	font-weight: 400;
+}
+
+.boxes-wrapper {
+	display: flex;
+	gap: 1rem;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+
+	.box {
+		width: 100%;
+		box-sizing: border-box;
+
+		@media (min-width: 468px) {
+			& {
+				width: 100%;
+			}
+		}
+
+		@media (min-width: 768px) {
+			& {
+				width: calc(50% - 0.5rem);
+			}
+		}
+
+		@media (min-width: 1200px) {
+			& {
+				width: calc(25% - 0.75rem);
+			}
+		}
+	}
+}

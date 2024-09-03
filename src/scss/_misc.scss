@@ -1,5 +1,56 @@
 @use '@nuitral/theming/dist/scss/variables' as variables;
 
+.container {
+	padding: 0 10rem;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 8rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.container {
+		padding: 0 6rem;
+	}
+}
+
+@media (max-width: 520px) {
+	.container {
+		padding: 0 4rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 0;
+	}
+}
+
+.mt-4rem {
+	margin-top: 4rem;
+}
+.mt-1rem {
+	margin-top: 1rem;
+}
+
+.mt-1_5rem {
+	margin-top: 1.5rem;
+}
+
+.mb-1_5rem {
+	margin-bottom: 1.5rem;
+}
+
+.mt-2rem {
+	margin-top: 2rem;
+}
+
+.mb-2rem {
+	margin-bottom: 2rem;
+}
+
 .divider {
 	height: 0.05rem;
 	margin: 1rem 0 1rem 0;

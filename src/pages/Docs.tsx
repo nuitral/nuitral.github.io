@@ -11,7 +11,7 @@ const Docs = () => {
 	}, [location.pathname, location.hash, navigate])
 	return (
 		<div className="docs">
-			<div className="container doc-wrapper">
+			<div className="docs-container doc-wrapper">
 				<Outlet></Outlet>
 			</div>
 		</div>

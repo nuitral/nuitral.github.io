@@ -1,0 +1,31 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+
+.icon-card {
+	height: 7rem;
+	width: 6rem;
+	border: 2px solid variables.$surface-600;
+	border-radius: 10px;
+	box-sizing: border-box;
+
+	.icon-view {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 5rem;
+		font-size: 2rem;
+	}
+	.icon-card-description {
+		height: 2rem;
+		display: flex;
+		padding: 0 0.5rem;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+		font-size: 11px;
+		background: variables.$surface-600;
+
+		.text {
+			margin-bottom: 4px;
+		}
+	}
+}

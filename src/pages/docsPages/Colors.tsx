@@ -18,8 +18,12 @@ const Colors = () => {
 	return (
 		<>
 			<div className="section-title">Colors</div>
-			<div className="section-subtitle mt-1rem mb-2rem">
-				This is a list of all available colors
+			<div className="section-subtitle mt-1rem">
+				This is a list of all available colors:
+			</div>
+			<div className="mt-1rem mb-2rem">
+				"For each color (e.g., primary), the corresponding shade is the
+				primary-500."
 			</div>
 
 			{colors.map((color: string) => (

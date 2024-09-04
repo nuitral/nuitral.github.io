@@ -38,6 +38,7 @@ $light-mode: (
 );
 
 @include nuitral.generate-theme($light-mode, nuitral.$dark-mode, 'pop');
+@import '@nuitral/icons/dist/nuitral-icons.scss';
 
 @import 'scss';
 

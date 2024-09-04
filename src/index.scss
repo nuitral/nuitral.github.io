@@ -40,9 +40,6 @@ $light-mode: (
 @include nuitral.generate-theme($light-mode, nuitral.$dark-mode, 'pop');
 
 @import 'scss';
-.nuitral-dark-mode {
-	color: white;
-}
 
 #root {
 	width: 100%;

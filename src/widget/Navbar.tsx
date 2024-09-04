@@ -39,7 +39,7 @@ const Navbar = () => {
 					<div className="bar"></div>
 				</div>
 			</div>
-			<div className="logo">
+			<div className="logo" onClick={() => navigateTo('/')}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="79.6px"

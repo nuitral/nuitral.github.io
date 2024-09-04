@@ -3,13 +3,17 @@
 	height: 100%;
 	gap: 0.5rem;
 
-	.docWrapper {
+	.doc-wrapper {
 		width: 100%;
 		padding: 0 3rem;
 		box-sizing: border-box;
-		.sectionTitle {
-			font-size: 20px;
+		.section-title {
+			font-size: 1.5rem;
 			font-weight: 600;
+		}
+		.section-subtitle {
+			font-size: 1.25rem;
+			font-weight: 400;
 		}
 	}
 

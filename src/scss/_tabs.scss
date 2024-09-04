@@ -1,0 +1,20 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+
+.tabs {
+	display: flex;
+
+	.tab {
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+		transition: color 0.3s ease-in-out;
+
+		&.active {
+			color: variables.$primary;
+			border-bottom: 2px solid variables.$primary;
+		}
+	}
+}
+
+.tab-content {
+	padding-top: 1rem;
+}

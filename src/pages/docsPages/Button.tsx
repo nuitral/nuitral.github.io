@@ -12,7 +12,7 @@ const Button = () => {
 			<NuitralButton primary>Simple Button</NuitralButton>
 			<div className="divider"></div>
 			<div className="text-description-head">Usage</div>
-			<Snippet code={buttonImport}></Snippet>
+			<Snippet code={buttonImport} language="ts"></Snippet>
 			<div className="divider"></div>
 			<div className="text-description">
 				<ul>

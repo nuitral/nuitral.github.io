@@ -1,10 +1,17 @@
-pre.language-javascript {
+pre.language-typescript,
+pre.language-javascript,
+pre.language-shell,
+pre.language-html {
 	border: 1px solid;
 	border-radius: 8px;
+	padding: 1.5rem !important;
 	background: transparent;
 }
 
-code.language-javascript {
+code.language-typescript,
+code.language-javascript,
+code.language-shell,
+code.language-html {
 	text-shadow: none !important;
 }
 
@@ -13,7 +20,10 @@ span.token.operator {
 }
 
 .nuitral-dark-mode {
-	.language-javascript {
+	.language-typescript,
+	.language-javascript,
+	.language-shell,
+	.language-html {
 		color: white;
 	}
 }

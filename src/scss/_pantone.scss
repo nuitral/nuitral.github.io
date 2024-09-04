@@ -1,0 +1,29 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+
+.pantone-card {
+	height: 7rem;
+	width: 6rem;
+	border: 2px solid variables.$surface-600;
+	border-radius: 10px;
+	box-sizing: border-box;
+
+	background: variables.$surface-600;
+
+	.pantone-card-color {
+		border-radius: 8px 8px 0 0;
+		height: 5rem;
+	}
+
+	.pantone-card-description {
+		height: 2rem;
+		display: flex;
+		padding: 0 0.5rem;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: flex-start;
+		font-size: 11px;
+		.text {
+			margin-bottom: 4px;
+		}
+	}
+}

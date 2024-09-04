@@ -1,5 +1,44 @@
+import PantoneCard from '../../components/PantoneCard.tsx'
+
 const Colors = () => {
-	return <>Colors</>
+	const colors = [
+		'primary',
+		'secondary',
+		'accent',
+		'error',
+		'success',
+		'warning',
+		'info',
+		'neutral',
+		'background',
+		'surface',
+	]
+	const scales = ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+
+	return (
+		<>
+			<div className="section-title">Colors</div>
+			<div className="section-subtitle mt-1rem mb-2rem">
+				This is a list of all available colors
+			</div>
+
+			{colors.map((color: string) => (
+				<div key={color}>
+					<div className="color-name mb-1rem mt-1rem">{color}</div>
+
+					<div className="colors-list">
+						{scales.map((scale: string) => (
+							<PantoneCard
+								key={color + '-' + scale}
+								colorName={color + '-' + scale}
+								backgroundColor={'nuitral-background-' + color + '-' + scale}
+							/>
+						))}
+					</div>
+				</div>
+			))}
+		</>
+	)
 }
 
 export default Colors

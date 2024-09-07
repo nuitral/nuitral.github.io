@@ -2,27 +2,16 @@
 
 @include nuitral.generate-theme(nuitral.$light-mode, nuitral.$dark-mode);
 
-$primary-light: #ff0054 !default;
-$secondary-light: #00d8ff !default;
-$accent-light: #ffdc00 !default;
-$error-light: #ff4136 !default;
-$success-light: #2ecc40 !default;
-$warning-light: #ff851b !default;
-$info-light: #0074d9 !default;
-$neutral-light: #b10dc9 !default;
-$background-light: #fdfefe !default;
-$surface-light: #ffffff !default;
-
-$primary-light-scale: nuitral.generate-color-scale($primary-light);
-$secondary-light-scale: nuitral.generate-color-scale($secondary-light);
-$accent-light-scale: nuitral.generate-color-scale($accent-light);
-$error-light-scale: nuitral.generate-color-scale($error-light);
-$success-light-scale: nuitral.generate-color-scale($success-light);
-$warning-light-scale: nuitral.generate-color-scale($warning-light);
-$info-light-scale: nuitral.generate-color-scale($info-light);
-$neutral-light-scale: nuitral.generate-color-scale($neutral-light);
-$background-light-scale: nuitral.generate-color-scale($background-light);
-$surface-light-scale: nuitral.generate-color-scale($surface-light);
+$primary-light-scale: nuitral.generate-color-scale(#ff0054);
+$secondary-light-scale: nuitral.generate-color-scale(#00d8ff);
+$accent-light-scale: nuitral.generate-color-scale(#ffdc00);
+$error-light-scale: nuitral.generate-color-scale(#ff4136);
+$success-light-scale: nuitral.generate-color-scale(#2ecc40);
+$warning-light-scale: nuitral.generate-color-scale(#ff851b);
+$info-light-scale: nuitral.generate-color-scale(#0074d9);
+$neutral-light-scale: nuitral.generate-color-scale(#b10dc9);
+$background-light-scale: nuitral.generate-color-scale(#fdfefe);
+$surface-light-scale: nuitral.generate-color-scale(#ffffff);
 
 $light-mode: (
 	primary: $primary-light-scale,

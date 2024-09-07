@@ -48,6 +48,9 @@ const Sidebar = () => {
 				>
 					Install Nuitral
 				</div>
+				<div className="section" onClick={() => navigateTo('/docs/theming')}>
+					Theming
+				</div>
 				<div className="title">Essentialt</div>
 				<div className="section" onClick={() => navigateTo('/docs/colors')}>
 					Colors

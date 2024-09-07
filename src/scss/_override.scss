@@ -1,7 +1,8 @@
 pre.language-typescript,
 pre.language-javascript,
 pre.language-shell,
-pre.language-html {
+pre.language-markup,
+pre.language-scss {
 	border: 1px solid;
 	border-radius: 8px;
 	padding: 1.5rem !important;
@@ -11,7 +12,8 @@ pre.language-html {
 code.language-typescript,
 code.language-javascript,
 code.language-shell,
-code.language-html {
+code.language-markup,
+code.language-scss {
 	text-shadow: none !important;
 }
 
@@ -23,7 +25,8 @@ span.token.operator {
 	.language-typescript,
 	.language-javascript,
 	.language-shell,
-	.language-html {
+	.language-markup,
+	.language-scss {
 		color: white;
 	}
 }

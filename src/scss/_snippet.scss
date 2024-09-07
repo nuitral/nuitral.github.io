@@ -1,0 +1,12 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+
+.snippet-container {
+	position: relative;
+	.snippet-filename {
+		position: absolute;
+		right: 0.8rem;
+		top: 0.4rem;
+		font-size: 0.8rem;
+		color: variables.$secondary;
+	}
+}

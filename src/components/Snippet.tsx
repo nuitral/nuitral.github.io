@@ -5,9 +5,18 @@ const languageMap: { [key: string]: string } = {
 	ts: 'typescript',
 	shell: 'shell',
 	html: 'markup',
+	scss: 'scss',
 }
 
-const Snippet = ({ code, language }: { code: string; language: string }) => {
+const Snippet = ({
+	code,
+	language,
+	fileName,
+}: {
+	code: string
+	language: string
+	fileName?: string
+}) => {
 	useEffect(() => {
 		// @ts-ignore
 		if (window.Prism) {
@@ -18,9 +27,12 @@ const Snippet = ({ code, language }: { code: string; language: string }) => {
 	const languageClass = languageMap[language] || 'typescript'
 
 	return (
-		<pre>
-			<code className={`language-${languageClass}`}>{code}</code>
-		</pre>
+		<div className="snippet-container">
+			{fileName && <div className="snippet-filename">{fileName}</div>}
+			<pre>
+				<code className={`language-${languageClass}`}>{code}</code>
+			</pre>
+		</div>
 	)
 }
 

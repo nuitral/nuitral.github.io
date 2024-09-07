@@ -36,10 +36,83 @@ const Install = () => {
 				language="scss"
 				fileName={'index.scss'}
 			/>
-			<div className="section-title mb-1rem mt-2rem">Display a component:</div>
+			<div className="section-title mb-1rem mt-2rem">
+				Import nuitral theming:
+			</div>
 			<div>
+				Import and use the <b>the nuitral theming hook</b> from the library you
+				have installed.
+			</div>
+			<div className="hint mb-1rem mt-1rem">
+				<p>
+					Use this hook in the component where you want to manage the dark/light
+					mode toggle and theme switching.
+				</p>
+			</div>
+
+			<Tabs>
+				<Tab label="React">
+					<Snippet
+						code={`import { useNuitralTheming } from '@nuitral/react-ui-suite'\n\nconst ReactComponent = () => {\n useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\tid: 'demo-app',\n\t}) \n return <></>;\n}; \n\nexport default ReactComponent;`}
+						language="ts"
+						fileName={'ReactComponent.tsx'}
+					></Snippet>
+				</Tab>
+				<Tab label="Vue">
+					<Snippet
+						code={`<script setup lang="ts">\nimport { useNuitralTheming } from '@nuitral/vue-ui-suite';\n...\n useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\tid: 'demo-app',\n\t})\n...\n</script>`}
+						language="ts"
+						fileName={'VueComponent.vue'}
+					></Snippet>
+				</Tab>
+			</Tabs>
+
+			<div className="hint mt-1_5rem mb-1rem">
+				<p>
+					<b>theme</b>: Specifies the default theme to be applied when landing
+					on the page. The default theme is 'nuitral'.
+				</p>
+				<p>
+					<b>darkMode</b>: Indicates whether the dark mode is enabled by
+					default. To set the light mode as the default, set this to false.
+				</p>
+				<p>
+					<b>id</b>: Refers to the ID of the element to which the theming will
+					be applied.
+				</p>
+			</div>
+
+			<div className="mb-1rem">
+				Below is an example demonstrating how this hook works:
+			</div>
+
+			<Snippet
+				code={`<html id="demo-app" nuitral-theme="nuitral" class="nuitral-dark-mode">\n ... \n</html>`}
+				language="html"
+				fileName={'index.html'}
+			></Snippet>
+
+			<div className="hint mt-1_5rem mb-1rem">
+				<p>
+					'demo-app' is the selector where the theme and the selected mode are
+					applied.{' '}
+				</p>
+				<p>
+					In this case, id='demo-app' has been manually managed in the
+					index.html file.
+				</p>
+				<p>
+					{' '}
+					In the future, it will be possible to handle everything automatically
+					through the previously described hook.
+				</p>
+			</div>
+
+			<div className="section-title mb-1rem mt-2rem">Display a component:</div>
+			<div className="mb-1rem">
 				Import the <b>nuitral component</b> from the library you have installed.
 			</div>
+
 			<Tabs>
 				<Tab label="React">
 					<Snippet

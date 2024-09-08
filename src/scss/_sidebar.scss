@@ -7,21 +7,34 @@
 	transition: all 0.3s ease;
 	.title {
 		font-weight: 600;
-		&:not(:first-child) {
-			padding-top: 0.5rem;
+		padding-bottom: 0.2rem;
+		padding-top: 1rem;
+
+		&.first {
+			padding-top: 0 !important;
 		}
 	}
 	.section {
 		cursor: pointer;
+		margin-left: 0.5rem;
 	}
 
-	.routes-section {
+	.nav-section {
+		display: none;
+	}
+
+	.close-icon {
 		display: none;
 	}
 
 	@media (max-width: 480px) {
-		.routes-section {
+		.nav-section {
 			display: block;
+
+			.personalization-section {
+				display: flex;
+				gap: 1rem;
+			}
 		}
 
 		& {
@@ -42,6 +55,13 @@
 			left: 0;
 			box-sizing: border-box;
 			z-index: 1000;
+
+			.close-icon {
+				display: block;
+				position: absolute;
+				right: 1rem;
+				cursor: pointer;
+			}
 		}
 	}
 }

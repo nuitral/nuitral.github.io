@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { useRef, useState, useEffect } from 'react'
+import Personalization from './Personalization.tsx'
 
 const Sidebar = () => {
 	const navigate = useNavigate()
@@ -21,9 +22,13 @@ const Sidebar = () => {
 		}
 	}, [])
 
+	const closeSidebar = () => {
+		sidebarRef.current?.classList.remove('open')
+	}
+
 	const navigateTo = (path: string) => {
 		navigate(path)
-		sidebarRef.current?.classList.remove('open')
+		closeSidebar()
 	}
 
 	const isDocsRoute = location.pathname.startsWith('/docs')
@@ -35,13 +40,28 @@ const Sidebar = () => {
 	return (
 		<>
 			<div ref={sidebarRef} className="sidebar">
-				<div className="routes-section">
+				<div className="close-icon" onClick={() => closeSidebar()}>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="16"
+						height="16"
+						fill="currentColor"
+						viewBox="0 0 16 16"
+					>
+						<path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+					</svg>
+				</div>
+				<div className="nav-section">
 					<div onClick={() => navigateTo('/')}>Home</div>
 					<div onClick={() => navigateTo('/docs')}>Docs</div>
 					<div onClick={() => navigateTo('/about')}>About</div>
 					<div className="divider"></div>
+					<div className="personalization-section">
+						<Personalization></Personalization>
+					</div>
+					<div className="divider"></div>
 				</div>
-				<div className="title">How to start</div>
+				<div className="title first">How to start</div>
 				<div
 					className="section"
 					onClick={() => navigateTo('/docs/howToInstall')}

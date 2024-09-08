@@ -42,37 +42,55 @@ const Theming = () => {
 				language="scss"
 				fileName="index.scss"
 			></Snippet>
-			<div className="section-title mb-1rem mt-2rem">Generate and manage a new theme:</div>
-			<div className="mt-1rem mb-1rem">
-				In addition to integrating the Nuitral theming, this hook also provides complete control over theme management.
+			<div className="section-title mb-1rem mt-2rem">
+				Generate and manage a new theme:
 			</div>
 			<div className="mt-1rem mb-1rem">
-				<p>- <b>isDarkMode</b> value indicates the current mode.</p>
-				<p>- <b>manageDarkMode</b> allows switching between light and dark mode.</p>
-				<p>-The <b>manageTheme</b> function enables selecting the active theme, in this case, either the default 'nuitral' theme or the 'pop' theme.</p>
+				In addition to integrating the Nuitral theming, this hook also provides
+				complete control over theme management.
+			</div>
+			<div className="mt-1rem mb-1rem">
+				<p>
+					- <b>isDarkMode</b> value indicates the current mode.
+				</p>
+				<p>
+					- <b>manageDarkMode</b> allows switching between light and dark mode.
+				</p>
+				<p>
+					-The <b>manageTheme</b> function enables selecting the active theme,
+					in this case, either the default 'nuitral' theme or the 'pop' theme.
+				</p>
 			</div>
 
-			<div className='hint mt-1_5rem mb-1rem'>
-				<p>The theme name is assigned using the `generate-theme` mixin in the main stylesheet, where nuitral theming is
-					applied.</p>
+			<div className="hint mt-1_5rem mb-1rem">
+				<p>
+					The theme name is assigned using the `generate-theme` mixin in the
+					main stylesheet, where nuitral theming is applied.
+				</p>
 			</div>
-			<Snippet code={'import { useNuitralTheming } from \'@nuitral/react-ui-suite\'\n' +
-				'\n' +
-				'const ReactComponent = () => {\n' +
-				'\tconst { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({\n' +
-				'\t\ttheme: \'nuitral\',\n' +
-				'\t\tdarkMode: true,\n' +
-				'\t\tid: \'demo-app\',\n' +
-				'\t})\n' +
-				'\n' +
-				'\treturn <>\n' +
-				'\t\t<button onClick={manageDarkMode}>{isDarkMode ? \'Set light mode\' : \' Set dark mode\'}</button>\n' +
-				'\t\t<button onClick={() => manageTheme(\'nuitral\')}>Set nuitral theme</button>\n' +
-				'\t\t<button onClick={() => manageTheme(\'pop\')}>Set pop theme</button>\n' +
-				'\t</>\n' +
-				'}\n' +
-				'\n' +
-				'export default ReactComponent\n'} language='ts' fileName='ReactComponent.ts'></Snippet>
+			<Snippet
+				code={
+					"import { useNuitralTheming } from '@nuitral/react-ui-suite'\n" +
+					'\n' +
+					'const ReactComponent = () => {\n' +
+					'\tconst { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({\n' +
+					"\t\ttheme: 'nuitral',\n" +
+					'\t\tdarkMode: true,\n' +
+					"\t\tid: 'demo-app',\n" +
+					'\t})\n' +
+					'\n' +
+					'\treturn <>\n' +
+					"\t\t<button onClick={manageDarkMode}>{isDarkMode ? 'Set light mode' : ' Set dark mode'}</button>\n" +
+					"\t\t<button onClick={() => manageTheme('nuitral')}>Set nuitral theme</button>\n" +
+					"\t\t<button onClick={() => manageTheme('pop')}>Set pop theme</button>\n" +
+					'\t</>\n' +
+					'}\n' +
+					'\n' +
+					'export default ReactComponent\n'
+				}
+				language="ts"
+				fileName="ReactComponent.ts"
+			></Snippet>
 			<div className="mt-1rem mb-1rem">
 				To generate a new theme, simply select the desired base colors. Using
 				the generate-color-scale function, color shades from 100 to 900 will be

@@ -1,0 +1,22 @@
+@use '@nuitral/theming/dist/scss/variables' as variables;
+a {
+	all: unset;
+	height: 16px !important;
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	cursor: pointer;
+	transition: color 0.3s ease;
+	&:hover {
+		color: variables.$accent;
+	}
+}
+
+.link-dimensions {
+	height: 16px;
+	width: 16px;
+	display: flex;
+	align-items: center;
+}

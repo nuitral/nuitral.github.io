@@ -9,6 +9,20 @@
 	max-width: 648px;
 }
 
+.about-container {
+	margin: 0 auto;
+	max-width: 648px;
+}
+
+.section-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.section-subtitle {
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
 .hint {
 	background-color: variables.$background-400;
 	padding: 0.5rem 1rem;
@@ -45,6 +59,9 @@
 	}
 }
 
+.font-size-12px {
+	font-size: 12px;
+}
 .mt-4rem {
 	margin-top: 4rem;
 }

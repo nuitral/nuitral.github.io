@@ -99,33 +99,35 @@ const Theming = () => {
 				</Tab>
 				<Tab label="Vue">
 					<Snippet
-						code={'<script lang="ts" setup>\n' +
-							'import { useNuitralTheming } from \'@nuitral/vue-ui-suite\'\n' +
+						code={
+							'<script lang="ts" setup>\n' +
+							"import { useNuitralTheming } from '@nuitral/vue-ui-suite'\n" +
 							'\n' +
 							'const { isDarkMode, manageDarkMode, manageTheme } = useNuitralTheming({\n' +
-							'\ttheme: \'nuitral\',\n' +
+							"\ttheme: 'nuitral',\n" +
 							'\tdarkMode: true,\n' +
-							'\tid: \'demo-app\',\n' +
+							"\tid: 'demo-app',\n" +
 							'})\n' +
-							'</script>'}
+							'</script>'
+						}
 						language="ts"
 						fileName={'VueComponent.vue'}
 					></Snippet>
 					<Snippet
-						code={'<template>\n' +
+						code={
+							'<template>\n' +
 							'\t<button @click="manageDarkMode">\n' +
-							'\t\t{{ isDarkMode ? \'Set light mode\' : \' Set dark mode\' }}\n' +
+							"\t\t{{ isDarkMode ? 'Set light mode' : ' Set dark mode' }}\n" +
 							'\t</button>\n' +
 							'\t<button @click="manageTheme(\'nuitral\')">Set nuitral theme</button>\n' +
 							'\t<button @click="manageTheme(\'pop\')">Set pop theme</button>\n' +
-							'</template>\n'}
+							'</template>\n'
+						}
 						language="html"
 						fileName={'VueComponent.vue'}
 					></Snippet>
 				</Tab>
 			</Tabs>
-
-
 
 			<div className="mt-1rem mb-1rem">
 				To generate a new theme, simply select the desired base colors. Using

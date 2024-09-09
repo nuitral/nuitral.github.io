@@ -83,14 +83,12 @@ const Install = () => {
 			</div>
 
 			<div className="mb-1rem">
-				To link <b>nuitral</b> to your project, simply use the selected ID (in this case, 'app-demo') in the project section.
+				To link <b>nuitral</b> to your project, simply use the selected ID (in
+				this case, 'app-demo') in the project section.
 			</div>
 
 			<Snippet
-				code={'\t<body id="demo-app">\n' +
-					'\t...\n' +
-					'\t...\n' +
-					'\t</body>'}
+				code={'\t<body id="demo-app">\n' + '\t...\n' + '\t...\n' + '\t</body>'}
 				language="html"
 				fileName={'index.html'}
 			></Snippet>

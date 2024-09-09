@@ -40,7 +40,12 @@ const Button = () => {
 				component styles and colors.
 			</div>
 			<div className="mt-1rem mb-1rem">
-				The Button is neutral white by default. To define its color, simply use the color attribute with the name of a color from the <Link to="/docs/colors" className="link-button">colors list</Link>.
+				The Button is neutral white by default. To define its color, simply use
+				the color attribute with the name of a color from the{' '}
+				<Link to="/docs/colors" className="link-button">
+					colors list
+				</Link>
+				.
 			</div>
 			<div className="hint mb-1rem mt-1rem">
 				<p>
@@ -65,51 +70,35 @@ const Button = () => {
 			<div className="mt-1rem mb-2rem">
 				Here is the result of the code above:
 			</div>
-			<p>
-				primary or primary-500
-			</p>
+			<p>primary or primary-500</p>
 
 			<NuitralButton primary>Button Text</NuitralButton>
 
-			<p>
-				primary-400
-			</p>
+			<p>primary-400</p>
 
 			<NuitralButton primary-400>Button Text</NuitralButton>
 
-			<p>
-				secondary or seconday-500
-			</p>
+			<p>secondary or seconday-500</p>
 
 			<NuitralButton secondary>Button Text</NuitralButton>
 
-			<p>
-				secondary
-			</p>
+			<p>secondary</p>
 
 			<NuitralButton secondary-600>Button Text</NuitralButton>
 
-			<p>
-				accent or accent-500
-			</p>
+			<p>accent or accent-500</p>
 
 			<NuitralButton accent>Button Text</NuitralButton>
 
-			<p>
-				accent-300
-			</p>
+			<p>accent-300</p>
 
 			<NuitralButton accent-300>Button Text</NuitralButton>
 
-			<p>
-				success or success-500
-			</p>
+			<p>success or success-500</p>
 
 			<NuitralButton success>Button Text</NuitralButton>
 
-			<p>
-				success-700
-			</p>
+			<p>success-700</p>
 
 			<NuitralButton success-700>Button Text</NuitralButton>
 		</>

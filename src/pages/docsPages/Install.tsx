@@ -83,11 +83,14 @@ const Install = () => {
 			</div>
 
 			<div className="mb-1rem">
-				Below is an example demonstrating how this hook works:
+				To link <b>nuitral</b> to your project, simply use the selected ID (in this case, 'app-demo') in the project section.
 			</div>
 
 			<Snippet
-				code={`<html id="demo-app" nuitral-theme="nuitral" class="nuitral-dark-mode">\n ... \n</html>`}
+				code={'\t<body id="demo-app">\n' +
+					'\t...\n' +
+					'\t...\n' +
+					'\t</body>'}
 				language="html"
 				fileName={'index.html'}
 			></Snippet>

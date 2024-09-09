@@ -65,7 +65,8 @@ const About = () => {
 					for everyone.
 				</div>
 				<div className="mt-1rem">
-					Remember to visit this site regularly to stay updated on the latest features and improvements. See you soon!
+					Remember to visit this site regularly to stay updated on the latest
+					features and improvements. See you soon!
 				</div>
 			</div>
 		</>

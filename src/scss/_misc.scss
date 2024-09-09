@@ -5,7 +5,8 @@
 }
 
 .docs-container {
-	padding: 0 4rem;
+	margin: 0 auto;
+	max-width: 648px;
 }
 
 .hint {
@@ -14,12 +15,15 @@
 	border-left: 2px solid variables.$accent;
 }
 
+.link-button {
+	display: inline;
+	cursor: pointer;
+	color: variables.$accent !important;
+}
+
 @media (max-width: 768px) {
 	.container {
 		padding: 0 8rem !important;
-	}
-	.docs-container {
-		padding: 0 3rem !important;
 	}
 }
 
@@ -27,25 +31,16 @@
 	.container {
 		padding: 0 6rem !important;
 	}
-	.docs-container {
-		padding: 0 2rem !important;
-	}
 }
 
 @media (max-width: 520px) {
 	.container {
 		padding: 0 4rem !important;
 	}
-	.docs-container {
-		padding: 0 1rem !important;
-	}
 }
 
 @media (max-width: 480px) {
 	.container {
-		padding: 0 !important;
-	}
-	.docs-container {
 		padding: 0 !important;
 	}
 }

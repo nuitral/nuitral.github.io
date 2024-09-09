@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { useRef, useState, useEffect } from 'react'
-import Personalization from './Personalization.tsx'
 
 const Sidebar = () => {
 	const navigate = useNavigate()
@@ -52,34 +51,46 @@ const Sidebar = () => {
 					</svg>
 				</div>
 				<div className="nav-section">
-					<div onClick={() => navigateTo('/')}>Home</div>
-					<div onClick={() => navigateTo('/docs')}>Docs</div>
-					<div onClick={() => navigateTo('/about')}>About</div>
-					<div className="divider"></div>
-					<div className="personalization-section">
-						<Personalization></Personalization>
+					<div className="link" onClick={() => navigateTo('/')}>
+						Home
 					</div>
+					<div className="link" onClick={() => navigateTo('/docs')}>
+						Docs
+					</div>
+					<div className="link" onClick={() => navigateTo('/about')}>
+						About
+					</div>
+
 					<div className="divider"></div>
 				</div>
 				<div className="title first">How to start</div>
 				<div
-					className="section"
+					className="section link"
 					onClick={() => navigateTo('/docs/howToInstall')}
 				>
 					Install Nuitral
 				</div>
-				<div className="section" onClick={() => navigateTo('/docs/theming')}>
+				<div
+					className="section link"
+					onClick={() => navigateTo('/docs/theming')}
+				>
 					Theming
 				</div>
 				<div className="title">Essentialt</div>
-				<div className="section" onClick={() => navigateTo('/docs/colors')}>
+				<div
+					className="section link"
+					onClick={() => navigateTo('/docs/colors')}
+				>
 					Colors
 				</div>
-				<div className="section" onClick={() => navigateTo('/docs/icons')}>
+				<div className="section link" onClick={() => navigateTo('/docs/icons')}>
 					Icons
 				</div>
 				<div className="title">Components</div>
-				<div className="section" onClick={() => navigateTo('/docs/button')}>
+				<div
+					className="section link"
+					onClick={() => navigateTo('/docs/button')}
+				>
 					Button
 				</div>
 			</div>

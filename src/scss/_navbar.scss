@@ -8,26 +8,42 @@
 	.sidebar-toggle {
 		display: none;
 	}
-	.logo {
-		height: 100%;
+
+	.navbar-elements {
 		display: flex;
 		align-items: center;
-		padding-bottom: 3px;
-		cursor: pointer;
-	}
-	.elements {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-		justify-content: flex-end;
+		flex: 1;
+		justify-content: space-between;
+		.logo {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding-bottom: 3px;
+			cursor: pointer;
+		}
+		.elements {
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			justify-content: flex-end;
+			.link-elements {
+				display: flex;
+				gap: 1rem;
+			}
+		}
 	}
 
 	@media (max-width: 480px) {
 		.sidebar-toggle {
 			display: block;
+			margin-right: 1rem;
 		}
-		.elements {
-			display: none;
+		.navbar-elements {
+			.elements {
+				.link-elements {
+					display: none;
+				}
+			}
 		}
 	}
 

@@ -76,7 +76,7 @@ const Sidebar = () => {
 				>
 					Theming
 				</div>
-				<div className="title">Essentialt</div>
+				<div className="title">Essentials</div>
 				<div
 					className="section link"
 					onClick={() => navigateTo('/docs/colors')}

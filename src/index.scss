@@ -71,7 +71,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: nuitral.$background;
+	background: nuitral.$surface;
 	font-family: 'Source Sans 3', sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
@@ -79,7 +79,7 @@ body {
 	scroll-behavior: smooth;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: thin;
-	scrollbar-color: nuitral.$background-200 nuitral.$background;
+	scrollbar-color: nuitral.$surface nuitral.$surface;
 }
 
 ::-webkit-scrollbar {
@@ -90,15 +90,15 @@ body {
 ::-webkit-scrollbar-thumb {
 	background-color: #888;
 	border-radius: 10px;
-	border: 3px solid nuitral.$background;
+	border: 3px solid nuitral.$surface;
 	transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: nuitral.$background-200;
+	background-color: nuitral.$surface;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: nuitral.$background;
+	background-color: nuitral.$surface;
 	border-radius: 10px;
 }

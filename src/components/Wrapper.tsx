@@ -8,6 +8,7 @@ import Colors from '../pages/docsPages/Colors.tsx'
 import Sidebar from '../widget/Sidebar.tsx'
 import Install from '../pages/docsPages/Install.tsx'
 import Theming from '../pages/docsPages/Theming.tsx'
+import IconCmp from '../pages/docsPages/IconCmp.tsx'
 
 const Wrapper = () => {
 	return (
@@ -22,6 +23,7 @@ const Wrapper = () => {
 						<Route path="colors" element={<Colors />} />
 						<Route path="icons" element={<Icons />} />
 						<Route path="button" element={<Button />} />
+						<Route path="icon" element={<IconCmp />} />
 					</Route>
 					<Route path="/about" element={<About />} />
 				</Routes>

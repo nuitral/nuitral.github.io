@@ -1,6 +1,6 @@
 import { NuitralButton } from '@nuitral/react-ui-suite'
 import { useNavigate } from 'react-router-dom'
-import Box from '../components/Box.tsx'
+import { NuitralBox } from '@nuitral/react-ui-suite'
 
 const Home = () => {
 	const navigate = useNavigate()
@@ -39,19 +39,23 @@ const Home = () => {
 				Let's Start
 			</NuitralButton>
 			<div className="boxes-wrapper mt-4rem">
-				<Box
+				<NuitralBox
+					primary-700
 					title="Unified Theme"
 					description="Combines light and dark modes into a single theme, ensuring a smooth development experience"
 				/>
-				<Box
+				<NuitralBox
+					primary-700
 					title="Fully Customizable"
 					description="Every aspect is fully customizable, offering total control to tailor the interface to specific needs"
 				/>
-				<Box
+				<NuitralBox
+					primary-700
 					title="Themes"
 					description="Makes creating new themes extremely easy, allowing for rapid customization"
 				/>
-				<Box
+				<NuitralBox
+					primary-700
 					title="Stylesheet"
 					description="Leverages the full power of SCSS with the same flexibility as CSS"
 				/>

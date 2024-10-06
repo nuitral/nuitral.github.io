@@ -25,8 +25,8 @@ const Personalization = () => {
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="16"
-						height="16"
+						width="22"
+						height="22"
 						fill="currentColor"
 						viewBox="0 0 16 16"
 					>
@@ -39,8 +39,8 @@ const Personalization = () => {
 				{isDarkMode && (
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="16"
-						height="16"
+						width="22"
+						height="22"
 						fill="currentColor"
 						viewBox="0 0 16 16"
 					>
@@ -50,8 +50,8 @@ const Personalization = () => {
 				{!isDarkMode && (
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="16"
-						height="16"
+						width="22"
+						height="22"
 						fill="currentColor"
 						viewBox="0 0 16 16"
 					>
@@ -62,8 +62,8 @@ const Personalization = () => {
 			<div className="link link-dimensions" onClick={toggleTheme}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					width="16"
-					height="16"
+					width="22"
+					height="22"
 					fill="currentColor"
 					viewBox="0 0 16 16"
 				>

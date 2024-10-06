@@ -22,10 +22,7 @@
 	box-sizing: border-box;
 	flex-wrap: wrap;
 
-	.box {
-		width: 100%;
-		box-sizing: border-box;
-
+	.nuitral-box {
 		@media (min-width: 468px) {
 			& {
 				width: 100%;

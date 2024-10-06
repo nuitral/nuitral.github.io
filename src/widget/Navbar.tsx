@@ -29,8 +29,8 @@ const Navbar = () => {
 				<div className="logo" onClick={() => navigateTo('/')}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="79.6px"
-						height="20px"
+						width="95.52px"
+						height="24px"
 						viewBox="0 0 199 50"
 					>
 						<g

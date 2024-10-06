@@ -87,6 +87,9 @@ const Sidebar = () => {
 					Icons
 				</div>
 				<div className="title">Components</div>
+				<div className="section link" onClick={() => navigateTo('/docs/box')}>
+					Box
+				</div>
 				<div
 					className="section link"
 					onClick={() => navigateTo('/docs/button')}

@@ -36,7 +36,7 @@ const Button = () => {
 				</Tab>
 			</Tabs>
 			<div className="mt-1rem mb-1rem">
-				The nuitral Suite provides a flexible and scalable way to manage
+				The <b>nuitral UI Suite</b> provides a flexible and scalable way to manage
 				component styles and colors.
 			</div>
 			<div className="mt-1rem mb-1rem">

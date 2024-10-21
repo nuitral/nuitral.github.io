@@ -53,7 +53,6 @@ $dark-mode: (
 
 @include nuitral.generate-theme($light-mode, $dark-mode, 'pop');
 
-
 #root {
 	width: 100%;
 	height: 100dvh;

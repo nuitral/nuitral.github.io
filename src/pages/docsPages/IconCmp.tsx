@@ -9,21 +9,37 @@ const IconCmp = () => {
 		<>
 			<div className="section-title">Icon:</div>
 			<div className="mt-1rem mb-1rem">
-				To use the icons in your project, import the @nuitra/icons SCSS file
-				into the root of your stylesheet
+				To use the icons in your project, import the <code>@nuitral/icons</code>{' '}
+				SCSS file into the root of your stylesheet or directly into your Vue{' '}
+				<code>main.ts</code> or React <code>main.tsx</code>.
 			</div>
-			<Snippet
-				code={`@import '@nuitral/icons/dist/nuitral-icons.scss;'`}
-				language="scss"
-				fileName="index.scss"
-			></Snippet>
+			<Tabs>
+				<Tab label="Stylesheet">
+					<Snippet
+						code={`@import '@nuitral/icons/dist/nuitral-icons.scss';`}
+						language="scss"
+						fileName="index.scss"
+					></Snippet>
+				</Tab>
+				<Tab label="Vue (main.ts)">
+					<Snippet
+						code={`import { createApp } from 'vue';\nimport App from './App.vue';\nimport '@nuitral/icons/dist/nuitral-icons.scss';\n\ncreateApp(App).mount('#app');`}
+						language="ts"
+						fileName="main.ts"
+					></Snippet>
+				</Tab>
+				<Tab label="React (main.tsx)">
+					<Snippet
+						code={`import React from 'react';\nimport ReactDOM from 'react-dom';\nimport App from './App';\nimport '@nuitral/icons/dist/nuitral-icons.scss';\n\nReactDOM.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>,\n  document.getElementById('root')\n);`}
+						language="tsx"
+						fileName="main.tsx"
+					></Snippet>
+				</Tab>
+			</Tabs>
 
 			<div className="mt-1rem mb-1rem">
 				Import <b>nuitral icon component </b> from the library you have
 				installed.
-			</div>
-			<div className="hint mb-1rem mt-1rem">
-				<p>Simply start typing, and it will be imported automatically.</p>
 			</div>
 			<Tabs>
 				<Tab label="React">

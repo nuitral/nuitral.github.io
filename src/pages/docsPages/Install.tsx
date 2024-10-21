@@ -7,7 +7,8 @@ const Install = () => {
 		<>
 			<div className="section-title">How to install:</div>
 			<div className="mt-1rem mb-1rem">
-				Install <b>nuitral</b> by running this command on your terminal.
+				Install <b>nuitral</b> by running this command in the root directory of
+				your project:
 			</div>
 			<Tabs>
 				<Tab label="React">
@@ -53,33 +54,42 @@ const Install = () => {
 			<Tabs>
 				<Tab label="React">
 					<Snippet
-						code={`import { useNuitralTheming } from '@nuitral/react-ui-suite'\n\nconst ReactComponent = () => {\n useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\tid: 'demo-app',\n\t}) \n return <></>;\n}; \n\nexport default ReactComponent;`}
+						code={`import { useNuitralTheming } from '@nuitral/react-ui-suite';\n\nconst ReactComponent = () => {\n const { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\trootId: 'demo-app',\n\t\tsaveSettings: true,\n\t}); \n return <></>;\n}; \n\nexport default ReactComponent;`}
 						language="ts"
 						fileName={'ReactComponent.tsx'}
 					></Snippet>
 				</Tab>
 				<Tab label="Vue">
 					<Snippet
-						code={`<script setup lang="ts">\nimport { useNuitralTheming } from '@nuitral/vue-ui-suite';\n...\n useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\tid: 'demo-app',\n\t})\n...\n</script>`}
+						code={`<script setup lang="ts">\nimport { useNuitralTheming } from '@nuitral/vue-ui-suite';\n...\n const { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\trootId: 'demo-app',\n\t\tsaveSettings: true,\n\t});\n...\n</script>`}
 						language="ts"
 						fileName={'VueComponent.vue'}
 					></Snippet>
 				</Tab>
 			</Tabs>
 
-			<div className="hint mt-1_5rem mb-1rem">
-				<p>
-					<b>theme</b>: Specifies the default theme to be applied when landing
-					on the page. The default theme is 'nuitral'.
-				</p>
-				<p>
-					<b>darkMode</b>: Indicates whether the dark mode is enabled by
-					default. To set the light mode as the default, set this to false.
-				</p>
-				<p>
-					<b>id</b>: Refers to the ID of the element to which the theming will
-					be applied.
-				</p>
+			<div className="mt-1_5rem mb-1_5rem">
+				<ul>
+					<li>
+						<b>theme</b>: Specifies the default theme to be applied when landing
+						on the page. The default theme is <code>'nuitral'</code>.
+					</li>
+					<li>
+						<b>darkMode</b>: Indicates whether dark mode is enabled by default.
+						To set the light mode as the default, set this to <code>false</code>
+						.
+					</li>
+					<li>
+						<b>rootId</b>: Refers to the ID of the element to which the theming
+						will be applied.
+					</li>
+					<li>
+						<b>saveSettings</b>: If set to <code>true</code>, the current theme
+						and light/dark mode settings are saved to localStorage and restored
+						when the user revisits the site. By default, this is set to{' '}
+						<code>false</code>.
+					</li>
+				</ul>
 			</div>
 
 			<div className="mb-1rem">

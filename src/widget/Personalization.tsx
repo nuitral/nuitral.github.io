@@ -6,7 +6,7 @@ const Personalization = () => {
 		theme: 'nuitral',
 		darkMode: true,
 		rootId: 'demo-app',
-		saveSettings: true
+		saveSettings: true,
 	})
 
 	const [theme, setTheme] = useState('nuitral')

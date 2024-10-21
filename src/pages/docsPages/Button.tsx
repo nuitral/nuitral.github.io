@@ -11,9 +11,6 @@ const Button = () => {
 			<div className="mt-1rem mb-1rem">
 				Import <b>nuitral Button</b> from the library you have installed.
 			</div>
-			<div className="hint mb-1rem mt-1rem">
-				<p>Simply start typing, and it will be imported automatically.</p>
-			</div>
 			<Tabs>
 				<Tab label="React">
 					<Snippet
@@ -36,8 +33,8 @@ const Button = () => {
 				</Tab>
 			</Tabs>
 			<div className="mt-1rem mb-1rem">
-				The <b>nuitral UI Suite</b> provides a flexible and scalable way to manage
-				component styles and colors.
+				The <b>nuitral UI Suite</b> provides a flexible and scalable way to
+				manage component styles and colors.
 			</div>
 			<div className="mt-1rem mb-1rem">
 				The Button is neutral white by default. To define its color, simply use

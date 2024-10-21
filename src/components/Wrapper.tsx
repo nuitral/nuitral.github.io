@@ -10,6 +10,7 @@ import Install from '../pages/docsPages/Install.tsx'
 import Theming from '../pages/docsPages/Theming.tsx'
 import IconCmp from '../pages/docsPages/IconCmp.tsx'
 import Box from '../pages/docsPages/Box.tsx'
+import Input from '../pages/docsPages/Input.tsx'
 
 const Wrapper = () => {
 	return (
@@ -26,6 +27,7 @@ const Wrapper = () => {
 						<Route path="box" element={<Box />} />
 						<Route path="button" element={<Button />} />
 						<Route path="icon" element={<IconCmp />} />
+						<Route path="input" element={<Input />} />
 					</Route>
 					<Route path="/about" element={<About />} />
 				</Routes>

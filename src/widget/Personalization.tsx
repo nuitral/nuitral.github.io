@@ -4,7 +4,7 @@ import { useNuitralTheming } from '@nuitral/react-ui-suite'
 const Personalization = () => {
 	const { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({
 		theme: 'nuitral',
-		darkMode: true,
+		darkMode: false,
 		rootId: 'demo-app',
 		saveSettings: true,
 	})

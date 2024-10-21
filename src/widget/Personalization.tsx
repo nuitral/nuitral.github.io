@@ -5,7 +5,8 @@ const Personalization = () => {
 	const { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({
 		theme: 'nuitral',
 		darkMode: true,
-		id: 'demo-app',
+		rootId: 'demo-app',
+		saveSettings: true
 	})
 
 	const [theme, setTheme] = useState('nuitral')

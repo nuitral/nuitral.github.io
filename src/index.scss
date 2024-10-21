@@ -1,4 +1,5 @@
 @use '@nuitral/theming/dist/scss/_index.scss' as nuitral;
+@use 'scss';
 
 @include nuitral.generate-theme(nuitral.$light-mode, nuitral.$dark-mode);
 
@@ -51,9 +52,7 @@ $dark-mode: (
 );
 
 @include nuitral.generate-theme($light-mode, $dark-mode, 'pop');
-@import '@nuitral/icons/dist/nuitral-icons.scss';
 
-@import 'scss';
 
 #root {
 	width: 100%;
@@ -71,7 +70,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background: nuitral.$surface;
+	background-color: nuitral.$background;
 	font-family: 'Source Sans 3', sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
@@ -79,7 +78,7 @@ body {
 	scroll-behavior: smooth;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: thin;
-	scrollbar-color: nuitral.$surface nuitral.$surface;
+	scrollbar-color: nuitral.$background nuitral.$background;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -93,15 +92,15 @@ body {
 ::-webkit-scrollbar-thumb {
 	background-color: #888;
 	border-radius: 10px;
-	border: 3px solid nuitral.$surface;
+	border: 3px solid nuitral.$background;
 	transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: nuitral.$surface;
+	background-color: nuitral.$background;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: nuitral.$surface;
+	background-color: nuitral.$background;
 	border-radius: 10px;
 }

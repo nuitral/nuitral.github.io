@@ -48,7 +48,7 @@
 		}
 
 		&.open {
-			background-color: variables.$surface;
+			background-color: variables.$background;
 			-webkit-backdrop-filter: blur(16px);
 			backdrop-filter: blur(16px);
 			width: 100%;

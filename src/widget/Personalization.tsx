@@ -2,14 +2,15 @@ import { useState } from 'react'
 import { useNuitralTheming } from '@nuitral/react-ui-suite'
 
 const Personalization = () => {
-	const { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({
-		theme: 'nuitral',
-		darkMode: false,
-		rootId: 'demo-app',
-		saveSettings: true,
-	})
+	const { manageDarkMode, isDarkMode, manageTheme, themeName } =
+		useNuitralTheming({
+			theme: 'nuitral',
+			darkMode: false,
+			rootId: 'demo-app',
+			saveSettings: true,
+		})
 
-	const [theme, setTheme] = useState('nuitral')
+	const [theme, setTheme] = useState(themeName)
 
 	const toggleTheme = () => {
 		const newTheme = theme === 'nuitral' ? 'pop' : 'nuitral'

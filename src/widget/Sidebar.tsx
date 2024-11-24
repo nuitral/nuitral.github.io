@@ -102,6 +102,9 @@ const Sidebar = () => {
 				<div className="section link" onClick={() => navigateTo('/docs/input')}>
 					Input
 				</div>
+				<div className="section link" onClick={() => navigateTo('/docs/tabs')}>
+					Tabs
+				</div>
 			</div>
 		</>
 	)

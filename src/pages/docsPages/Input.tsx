@@ -1,7 +1,5 @@
 import Snippet from '../../components/Snippet.tsx'
-import { NuitralInput } from '@nuitral/react-ui-suite'
-import Tabs from '../../components/Tabs.tsx'
-import Tab from '../../components/Tab.tsx'
+import { NuitralInput, NuitralTab, NuitralTabs } from '@nuitral/react-ui-suite'
 import { useState } from 'react'
 
 const Input = () => {
@@ -12,22 +10,22 @@ const Input = () => {
 			<div className="mt-1rem mb-1rem">
 				Import <b>nuitral Input</b> from the library you have installed.
 			</div>
-			<Tabs>
-				<Tab label="React">
+			<NuitralTabs primary>
+				<NuitralTab label="React">
 					<Snippet
 						code={`import { NuitralInput } from '@nuitral/react-ui-suite';\nimport { useState } from 'react';\n\nconst ReactComponent = () => {\n  const [inputValue, setInputValue] = useState<string | number>('Input test');\n\n  return (\n    <NuitralInput\n      value={inputValue}\n      onChange={setInputValue}\n      placeholder={'placeholder'}\n      icon={'user'}\n    ></NuitralInput>\n  );\n};\n\nexport default ReactComponent;`}
 						language="tsx"
 						fileName={'ReactComponent.tsx'}
 					></Snippet>
-				</Tab>
-				<Tab label="Vue">
+				</NuitralTab>
+				<NuitralTab label="Vue">
 					<Snippet
 						code={`<script setup lang="ts">\nimport { ref } from 'vue';\nimport { NuitralInput } from '@nuitral/vue-ui-suite';\n\nconst inputModel = ref('Input test');\n</script>\n\n<template>\n  <NuitralInput v-model="inputModel" placeholder="placeholder" icon="user"></NuitralInput>\n</template>`}
 						language="vue"
 						fileName={'VueComponent.vue'}
 					></Snippet>
-				</Tab>
-			</Tabs>
+				</NuitralTab>
+			</NuitralTabs>
 
 			<div className="mt-1rem mb-1rem">
 				<p>
@@ -60,22 +58,22 @@ const Input = () => {
 
 			<div className="mt-1rem mb-1rem">Here are some examples:</div>
 
-			<Tabs>
-				<Tab label="React">
+			<NuitralTabs primary>
+				<NuitralTab label="React">
 					<Snippet
 						code={`import { NuitralInput } from '@nuitral/react-ui-suite';\nimport { useState } from 'react';\n\nconst ReactComponent = () => {\n  const [inputValue, setInputValue] = useState<string | number>('Input test');\n\n  return (\n    <>\n      <NuitralInput\n        value={inputValue}\n        onChange={setInputValue}\n        placeholder={'placeholder'}\n        icon={'user'}\n      ></NuitralInput>\n\n      <NuitralInput\n        value={inputValue}\n        onChange={setInputValue}\n        icon={'user'}\n        placeholder={'placeholder'}\n        iconPosition={'right'}\n        type={'password'}\n      ></NuitralInput>\n\n      <NuitralInput\n        value={inputValue}\n        onChange={setInputValue}\n        placeholder={'placeholder'}\n        disabled\n      ></NuitralInput>\n    </>\n  );\n};\n\nexport default ReactComponent;`}
 						language="tsx"
 						fileName={'ReactComponent.tsx'}
 					></Snippet>
-				</Tab>
-				<Tab label="Vue">
+				</NuitralTab>
+				<NuitralTab label="Vue">
 					<Snippet
 						code={`<script setup lang="ts">\nimport { ref } from 'vue';\nimport { NuitralInput } from '@nuitral/vue-ui-suite';\n\nconst inputModel = ref('Input test');\n</script>\n\n<template>\n  <NuitralInput v-model="inputModel" placeholder="placeholder" icon="user"></NuitralInput>\n  <NuitralInput v-model="inputModel" placeholder="placeholder" icon="user" type="password" icon-position="right"></NuitralInput>\n  <NuitralInput v-model="inputModel" placeholder="placeholder" :disabled="true"></NuitralInput>\n</template>`}
 						language="vue"
 						fileName={'VueComponent.vue'}
 					></Snippet>
-				</Tab>
-			</Tabs>
+				</NuitralTab>
+			</NuitralTabs>
 
 			<div className="mt-1rem mb-2rem">
 				Here is the result of the code above:

@@ -1,6 +1,5 @@
 import Snippet from '../../components/Snippet.tsx'
-import Tabs from '../../components/Tabs.tsx'
-import Tab from '../../components/Tab.tsx'
+import { NuitralTab, NuitralTabs } from '@nuitral/react-ui-suite'
 
 const Theming = () => {
 	return (
@@ -71,8 +70,8 @@ const Theming = () => {
 				</p>
 			</div>
 
-			<Tabs>
-				<Tab label="React">
+			<NuitralTabs primary>
+				<NuitralTab label="React">
 					<Snippet
 						code={
 							"import { useNuitralTheming } from '@nuitral/react-ui-suite'\n" +
@@ -96,8 +95,8 @@ const Theming = () => {
 						language="ts"
 						fileName="ReactComponent.ts"
 					></Snippet>
-				</Tab>
-				<Tab label="Vue">
+				</NuitralTab>
+				<NuitralTab label="Vue">
 					<Snippet
 						code={
 							'<script lang="ts" setup>\n' +
@@ -126,8 +125,8 @@ const Theming = () => {
 						language="html"
 						fileName={'VueComponent.vue'}
 					></Snippet>
-				</Tab>
-			</Tabs>
+				</NuitralTab>
+			</NuitralTabs>
 
 			<div className="mt-1rem mb-1rem">
 				To generate a new theme, simply select the desired base colors. Using

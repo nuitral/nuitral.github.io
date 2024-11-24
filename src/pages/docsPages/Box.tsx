@@ -1,8 +1,6 @@
-import Tab from '../../components/Tab.tsx'
 import Snippet from '../../components/Snippet.tsx'
-import Tabs from '../../components/Tabs.tsx'
 import { Link } from 'react-router-dom'
-import { NuitralBox } from '@nuitral/react-ui-suite'
+import { NuitralBox, NuitralTabs, NuitralTab } from '@nuitral/react-ui-suite'
 
 const Box = () => {
 	return (
@@ -11,15 +9,15 @@ const Box = () => {
 			<div className="mt-1rem mb-1rem">
 				Import <b>nuitral Box</b> from the library you have installed.
 			</div>
-			<Tabs>
-				<Tab label="React">
+			<NuitralTabs primary>
+				<NuitralTab label="React">
 					<Snippet
 						code={`import { NuitralBox } from '@nuitral/react-ui-suite';\n\nconst ReactComponent = () => {\n  return (\n    <NuitralBox title="Box Title" description="Box Description" />\n  );\n};\n\nexport default ReactComponent;`}
 						language="ts"
 						fileName={'ReactComponent.tsx'}
 					></Snippet>
-				</Tab>
-				<Tab label="Vue">
+				</NuitralTab>
+				<NuitralTab label="Vue">
 					<Snippet
 						code={`<script setup lang="ts">\nimport { NuitralBox } from '@nuitral/vue-ui-suite';\n</script>`}
 						language="ts"
@@ -30,8 +28,8 @@ const Box = () => {
 						language="html"
 						fileName={'VueComponent.vue'}
 					></Snippet>
-				</Tab>
-			</Tabs>
+				</NuitralTab>
+			</NuitralTabs>
 			<div className="mt-1rem mb-1rem">
 				The <b>nuitral UI Suite</b> provides a flexible and scalable way to
 				manage component styles and colors.

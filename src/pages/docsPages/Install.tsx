@@ -1,6 +1,5 @@
 import Snippet from '../../components/Snippet.tsx'
-import Tabs from '../../components/Tabs.tsx'
-import Tab from '../../components/Tab.tsx'
+import { NuitralTab, NuitralTabs } from '@nuitral/react-ui-suite'
 
 const Install = () => {
 	return (
@@ -10,22 +9,22 @@ const Install = () => {
 				Install <b>nuitral</b> by running this command in the root directory of
 				your project:
 			</div>
-			<Tabs>
-				<Tab label="React">
+			<NuitralTabs primary>
+				<NuitralTab label="React">
 					<Snippet
 						code="npm i @nuitral/react-ui-suite"
 						language="shell"
 						fileName={'shell'}
 					></Snippet>
-				</Tab>
-				<Tab label="Vue">
+				</NuitralTab>
+				<NuitralTab label="Vue">
 					<Snippet
 						code="npm i @nuitral/vue-ui-suite"
 						language="shell"
 						fileName={'shell'}
 					></Snippet>
-				</Tab>
-			</Tabs>
+				</NuitralTab>
+			</NuitralTabs>
 			<div className="section-title mb-1rem mt-2rem">How to use:</div>
 			<div>
 				Import the <b>nuitral theme</b> from the theming library in your SCSS
@@ -51,22 +50,22 @@ const Install = () => {
 				</p>
 			</div>
 
-			<Tabs>
-				<Tab label="React">
+			<NuitralTabs primary>
+				<NuitralTab label="React">
 					<Snippet
 						code={`import { useNuitralTheming } from '@nuitral/react-ui-suite';\n\nconst ReactComponent = () => {\n const { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\trootId: 'demo-app',\n\t\tsaveSettings: true,\n\t}); \n return <></>;\n}; \n\nexport default ReactComponent;`}
 						language="ts"
 						fileName={'ReactComponent.tsx'}
 					></Snippet>
-				</Tab>
-				<Tab label="Vue">
+				</NuitralTab>
+				<NuitralTab label="Vue">
 					<Snippet
 						code={`<script setup lang="ts">\nimport { useNuitralTheming } from '@nuitral/vue-ui-suite';\n...\n const { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({\n\t\ttheme: 'nuitral',\n\t\tdarkMode: true,\n\t\trootId: 'demo-app',\n\t\tsaveSettings: true,\n\t});\n...\n</script>`}
 						language="ts"
 						fileName={'VueComponent.vue'}
 					></Snippet>
-				</Tab>
-			</Tabs>
+				</NuitralTab>
+			</NuitralTabs>
 
 			<div className="mt-1_5rem mb-1_5rem">
 				<ul>
@@ -124,15 +123,15 @@ const Install = () => {
 				Import the <b>nuitral component</b> from the library you have installed.
 			</div>
 
-			<Tabs>
-				<Tab label="React">
+			<NuitralTabs primary>
+				<NuitralTab label="React">
 					<Snippet
 						code={`import { NuitralButton } from '@nuitral/react-ui-suite';\n\nconst ReactComponent = () => {\n  return (\n    <NuitralButton>Button Text</NuitralButton>\n  );\n}; \n\nexport default ReactComponent;`}
 						language="ts"
 						fileName={'ReactComponent.tsx'}
 					></Snippet>
-				</Tab>
-				<Tab label="Vue">
+				</NuitralTab>
+				<NuitralTab label="Vue">
 					<Snippet
 						code={`<script setup lang="ts">\nimport { NuitralButton } from '@nuitral/vue-ui-suite';\n</script>`}
 						language="ts"
@@ -143,8 +142,8 @@ const Install = () => {
 						language="html"
 						fileName={'VueComponent.vue'}
 					></Snippet>
-				</Tab>
-			</Tabs>
+				</NuitralTab>
+			</NuitralTabs>
 		</>
 	)
 }

@@ -431,7 +431,7 @@ export default ReactTabsExample;`,language:"tsx",fileName:"ReactComponent.tsx"})
   </NuitralTab>
 </NuitralTabs>`,language:"tsx",fileName:"ReactComponent.tsx"}),s.jsxs("div",{className:"mt-1rem mb-1rem",children:["The ",s.jsx("b",{children:"onSelection"})," prop is a callback function that is invoked when a tab is selected. It receives the content, index, and item of the selected tab, giving you access to properties like label, icon, and component for easier customization or handling."]})]}),s.jsxs(O,{label:"Vue",children:[s.jsxs("div",{className:"mt-1rem mb-1rem",children:["It is possible to define tabs using the ",s.jsx("b",{children:"items"})," prop by providing an array of tab definitions:"]}),s.jsx(P,{code:`<script setup lang="ts">
 import { ref } from 'vue';
-import { NuitralTabs, NuitralTab } from '@nuitral/react-ui-suite';
+import { NuitralTabs, NuitralTab } from '@nuitral/vue-ui-suite';
 import DemoComponentOne from './DemoComponentOne.vue';
 import DemoComponentTwo from './DemoComponentTwo.vue';
 

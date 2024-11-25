@@ -81,7 +81,7 @@ export default ReactTabsExample;`}
 					<Snippet
 						code={`<script setup lang="ts">
 import { ref } from 'vue';
-import { NuitralTabs, NuitralTab } from '@nuitral/react-ui-suite';
+import { NuitralTabs, NuitralTab } from '@nuitral/vue-ui-suite';
 import DemoComponentOne from './DemoComponentOne.vue';
 import DemoComponentTwo from './DemoComponentTwo.vue';
 

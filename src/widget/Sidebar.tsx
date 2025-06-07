@@ -96,6 +96,9 @@ const Sidebar = () => {
 				>
 					Button
 				</div>
+				<div className="section link" onClick={() => navigateTo('/docs/card')}>
+					Card
+				</div>
 				<div className="section link" onClick={() => navigateTo('/docs/icon')}>
 					Icon
 				</div>

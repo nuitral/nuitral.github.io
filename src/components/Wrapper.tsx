@@ -4,6 +4,7 @@ import Docs from '../pages/Docs.tsx'
 import About from '../pages/About.tsx'
 import Icons from '../pages/docsPages/Icons.tsx'
 import Button from '../pages/docsPages/Button.tsx'
+import Card from '../pages/docsPages/Card.tsx'
 import Colors from '../pages/docsPages/Colors.tsx'
 import Sidebar from '../widget/Sidebar.tsx'
 import Install from '../pages/docsPages/Install.tsx'
@@ -27,6 +28,7 @@ const Wrapper = () => {
 						<Route path="icons" element={<Icons />} />
 						<Route path="box" element={<Box />} />
 						<Route path="button" element={<Button />} />
+						<Route path="card" element={<Card />} />
 						<Route path="icon" element={<IconCmp />} />
 						<Route path="input" element={<Input />} />
 						<Route path="tabs" element={<Tabs />} />

@@ -1,23 +1,34 @@
 import { Routes, Route } from 'react-router-dom'
 import Sidebar from '../widget/Sidebar.tsx'
-import {paths} from '../../utils'
+import { routes } from '../../utils'
+import { AppRoute, RouteGroup } from '../../models'
+import { ReactElement } from 'react'
 
 const Wrapper = () => {
+	const renderChildRoutes = (groups?: RouteGroup[]): ReactElement[] => {
+		if (!groups) return []
+
+		return groups.flatMap(group =>
+			group.children.map(({ name, path, component: Component, children }) => (
+				<Route key={name} path={path} element={<Component />}>
+					{children && renderChildRoutes(children)}
+				</Route>
+			))
+		)
+	}
+
+	const renderRoutes = (routesArray: AppRoute[]): ReactElement[] =>
+		routesArray.map(({ name, path, component: Component, children }) => (
+			<Route key={name} path={path} element={<Component />}>
+				{children && renderChildRoutes(children)}
+			</Route>
+		))
+
 	return (
 		<div className="wrapper">
-			<Sidebar></Sidebar>
+			<Sidebar />
 			<div className="router-container">
-				<Routes>
-					<Route path={paths.home.path} element={<paths.home.component />} />
-
-					<Route path={paths.docs.path} element={<paths.docs.component />}>
-						{Object.entries(paths.docs.children).map(([key, { path, component: ChildComponent }]) => (
-							<Route key={key} path={path} element={<ChildComponent />} />
-						))}
-					</Route>
-
-					<Route path={paths.about.path} element={<paths.about.component />} />
-				</Routes>
+				<Routes>{renderRoutes(routes)}</Routes>
 			</div>
 		</div>
 	)

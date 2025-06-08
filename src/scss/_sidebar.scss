@@ -5,15 +5,17 @@
 	height: 100%;
 	padding-right: 1rem;
 	transition: all 0.3s ease;
+
 	.title {
 		font-weight: 600;
 		padding-bottom: 0.2rem;
 		padding-top: 1rem;
 
-		&.first {
-			padding-top: 0 !important;
+		&:first-of-type {
+			padding-top: 0;
 		}
 	}
+
 	.section {
 		cursor: pointer;
 		margin-left: 0.5rem;

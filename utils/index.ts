@@ -1,3 +1,3 @@
-import { paths } from './paths'
+import { routes } from './routes.ts'
 
-export { paths }
+export { routes }

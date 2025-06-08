@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://nuitral.github.io",
 	"dependencies": {
-		"@nuitral/react-ui-suite": "file:../react-ui-suite/nuitral-react-ui-suite-0.0.1-alpha.6.tgz",
+		"@nuitral/react-ui-suite": "^0.0.1-alpha.8",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
 		"react-router-dom": "^7.6.2",
@@ -36,6 +36,7 @@
 		"globals": "^16.2.0",
 		"prettier": "^3.5.3",
 		"typescript": "^5.8.3",
-		"vite": "^6.3.5"
+		"vite": "^6.3.5",
+		"vite-tsconfig-paths": "^5.1.4"
 	}
 }

@@ -91,7 +91,7 @@ export const routes: AppRoute[] = [
 					},
 					{
 						name: 'docs.icon',
-						label: 'Single Icon',
+						label: 'Icon',
 						path: 'icon',
 						component: IconCmp,
 					},

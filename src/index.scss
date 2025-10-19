@@ -1,4 +1,4 @@
-@use '@nuitral/theming/dist/scss/_index.scss' as nuitral;
+@use '../../theming/lib/scss/_index.scss' as nuitral;
 @use 'scss';
 
 @include nuitral.generate-theme(nuitral.$light-mode, nuitral.$dark-mode);
@@ -69,8 +69,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background: nuitral.$surface;
 	font-family: 'Source Sans 3', sans-serif;
+	color: var(--text-color);
 	font-optical-sizing: auto;
 	font-weight: normal;
 	font-style: normal;

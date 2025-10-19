@@ -98,7 +98,7 @@ const Input = () => {
 
 			<p>Disabled input:</p>
 			<NuitralInput
-				value={'Input test'}
+				value={'Input test disabled'}
 				onChange={() => {}}
 				placeholder={'placeholder'}
 				disabled

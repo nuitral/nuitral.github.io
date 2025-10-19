@@ -29,13 +29,12 @@ const Home = () => {
 				A complete UI suite for your projects
 			</div>
 			<div className="home-subtitle mt-1_5rem mb-2rem">
-				Multiple themes with light and dark modes. Fully customizable,
-				lightweight, powerful, and native!
+				Unified theming engine - Each theme includes both light and dark modes, with full freedom to create unlimited custom themes.
 			</div>
 			<div className="home-description  mt-2rem mb-2rem">
-				Designed for developers by developers.
+				Performance, control, and native flexibility. Built for Vue & React. Angular coming soon.
 			</div>
-			<NuitralButton primary onClick={() => navigate('/docs')}>
+			<NuitralButton primary-900 onClick={() => navigate('/docs')}>
 				Let's Start
 			</NuitralButton>
 			<div className="boxes-wrapper mt-4rem">

@@ -34,27 +34,27 @@ const Home = () => {
 			<div className="home-description  mt-2rem mb-2rem">
 				Performance, control, and native flexibility. Built for Vue & React. Angular coming soon.
 			</div>
-			<NuitralButton primary-900 onClick={() => navigate('/docs')}>
+			<NuitralButton primary onClick={() => navigate('/docs')}>
 				Let's Start
 			</NuitralButton>
 			<div className="boxes-wrapper mt-4rem">
 				<NuitralBox
-					primary-700
+					primary-300
 					title="Unified Theme"
 					description="Combines light and dark modes into a single theme, ensuring a smooth development experience"
 				/>
 				<NuitralBox
-					primary-700
+					primary-300
 					title="Fully Customizable"
 					description="Every aspect is fully customizable, offering total control to tailor the interface to specific needs"
 				/>
 				<NuitralBox
-					primary-700
+					primary-300
 					title="Themes"
 					description="Makes creating new themes extremely easy, allowing for rapid customization"
 				/>
 				<NuitralBox
-					primary-700
+					primary-300
 					title="Stylesheet"
 					description="Leverages the full power of SCSS with the same flexibility as CSS"
 				/>

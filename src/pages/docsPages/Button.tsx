@@ -51,7 +51,8 @@ const Button = () => {
 			<div className="mt-1rem mb-1rem">Here are some examples:</div>
 
 			<Snippet
-				code={`<NuitralButton primary-900>Button Text</NuitralButton>
+				code={`<NuitralButton primary>Button Text</NuitralButton>
+<NuitralButton primary-900>Button Text</NuitralButton>
 <NuitralButton secondary>Button Text</NuitralButton>
 <NuitralButton secondary-600>Button Text</NuitralButton>
 <NuitralButton accent>Button Text</NuitralButton>
@@ -64,6 +65,10 @@ const Button = () => {
 			<div className="mt-1rem mb-2rem">
 				Here is the result of the code above:
 			</div>
+			<p>primary</p>
+
+			<NuitralButton primary>Button Text</NuitralButton>
+
 			<p>primary-900</p>
 
 			<NuitralButton primary-900>Button Text</NuitralButton>

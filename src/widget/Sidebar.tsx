@@ -31,8 +31,8 @@ const Sidebar = () => {
 	const docGroups = docsRoute?.children ?? []
 
 	const renderGroup = (group: RouteGroup) => (
-		<div key={group.section}>
-			<div className="title">{group.section}</div>
+		<div key={group.section} className="mb-1_5">
+			<div className="title nuitral-color-primary-300">{group.section}</div>
 			{group.children.map(item => (
 				<div
 					key={item.name}

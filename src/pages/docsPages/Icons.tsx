@@ -7,6 +7,9 @@ const Icons = () => {
 	return (
 		<>
 			<div className="section-title">Icons</div>
+			<div className="hint mt-1_5rem mb-1rem">
+				<p>This section is WIP.</p>
+			</div>
 			<div className="mt-1rem mb-2rem">
 				This is a list of all available icons:
 				<p>

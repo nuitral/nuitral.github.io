@@ -26,18 +26,18 @@ const Theming = () => {
 
 			<div className="section-title mb-1rem">Change default colors:</div>
 			<Snippet
-				code={
-					'// Import of nuitral theming scss\n' +
-					"@use '@nuitral/theming/dist/scss/index.scss' as nuitral with (\n" +
-					'\t// Override primary color for light-mode\n' +
-					'\t$primary-light: #00d8ff\n' +
-					'\t// Override accent color for dark-mode\n' +
-					'\t$accent-dark: #ffdc00\n' +
+				code={'// Import nuitral variables\n' +
+					'@use \'@nuitral/theming/dist/scss/variables/_index.scss\' with (\n' +
+					'\t// Override primary color for light mode\n' +
+					'\t$primary-light: red,\n' +
+					'\t// Override primary color for dark mode\n' +
+					'\t$primary-dark: blue,\n' +
 					'\t// Other variables\n' +
 					'\t// ...\n' +
 					');\n' +
+					'// Import of nuitral theming scss\n' +
+					'@use \'@nuitral/theming/dist/scss/_index.scss\' as nuitral;\n' +
 					'\n' +
-					'// Default theme with overrides\n' +
 					'@include nuitral.generate-theme(nuitral.$light-mode, nuitral.$dark-mode);'
 				}
 				language="scss"

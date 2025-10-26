@@ -12,6 +12,7 @@ import Card from '../src/pages/docsPages/Card'
 import IconCmp from '../src/pages/docsPages/IconCmp'
 import Input from '../src/pages/docsPages/Input'
 import Tabs from '../src/pages/docsPages/Tabs'
+import Layout from '../src/pages/docsPages/Layout.tsx'
 
 import type { AppRoute } from '../models'
 
@@ -65,6 +66,12 @@ export const routes: AppRoute[] = [
 						label: 'Icons',
 						path: 'icons',
 						component: Icons,
+					},
+					{
+						name: 'docs.layout',
+						label: 'Layout',
+						path: 'layout',
+						component: Layout,
 					},
 				],
 			},

@@ -23,26 +23,6 @@ const Theming = () => {
 				Just like you can switch between modes, you can also switch between
 				themes, and each theme will have both light and dark modes.
 			</div>
-
-			<div className="section-title mb-1rem">Change default colors:</div>
-			<Snippet
-				code={'// Import nuitral variables\n' +
-					'@use \'@nuitral/theming/dist/scss/variables/_index.scss\' with (\n' +
-					'\t// Override primary color for light mode\n' +
-					'\t$primary-light: red,\n' +
-					'\t// Override primary color for dark mode\n' +
-					'\t$primary-dark: blue,\n' +
-					'\t// Other variables\n' +
-					'\t// ...\n' +
-					');\n' +
-					'// Import of nuitral theming scss\n' +
-					'@use \'@nuitral/theming/dist/scss/_index.scss\' as nuitral;\n' +
-					'\n' +
-					'@include nuitral.generate-theme(nuitral.$light-mode, nuitral.$dark-mode);'
-				}
-				language="scss"
-				fileName="index.scss"
-			></Snippet>
 			<div className="section-title mb-1rem mt-2rem">
 				Generate and manage a new theme:
 			</div>
@@ -150,74 +130,56 @@ const Theming = () => {
 				</p>
 			</div>
 			<Snippet
-				code={
-					'// Import of nuitral theming scss\n' +
-					"@use '@nuitral/theming/dist/scss/index.scss' as nuitral;\n" +
-					'\n' +
-					'// Default "nuitral" theme\n' +
-					'@include nuitral.generate-theme(nuitral.$light-mode, nuitral.$dark-mode);\n' +
-					'\n' +
-					'// "pop" theme\n' +
-					'\n' +
-					'// "pop" theme colors scales for light-mode\n' +
-					'$primary-light-scale: nuitral.generate-color-scale(#ff0054);\n' +
-					'$secondary-light-scale: nuitral.generate-color-scale(#00d8ff);\n' +
-					'$accent-light-scale: nuitral.generate-color-scale(#ffdc00);\n' +
-					'$error-light-scale: nuitral.generate-color-scale(#ff4136);\n' +
-					'$success-light-scale: nuitral.generate-color-scale(#2ecc40);\n' +
-					'$warning-light-scale: nuitral.generate-color-scale(#ff851b);\n' +
-					'$info-light-scale: nuitral.generate-color-scale(#0074d9);\n' +
-					'$neutral-light-scale: nuitral.generate-color-scale(#b10dc9);\n' +
-					'$background-light-scale: nuitral.generate-color-scale(#fdfefe);\n' +
-					'$surface-light-scale: nuitral.generate-color-scale(#ffffff);\n' +
-					'\n' +
-					'// "pop" scale for light mode\n' +
-					'$light-mode: (\n' +
-					'\tprimary: $primary-light-scale,\n' +
-					'\tsecondary: $secondary-light-scale,\n' +
-					'\taccent: $accent-light-scale,\n' +
-					'\tbackground: $background-light-scale,\n' +
-					'\tsurface: $surface-light-scale,\n' +
-					'\terror: $error-light-scale,\n' +
-					'\tsuccess: $success-light-scale,\n' +
-					'\twarning: $warning-light-scale,\n' +
-					'\tinfo: $info-light-scale,\n' +
-					'\tneutral: $neutral-light-scale,\n' +
-					');\n' +
-					'\n' +
-					'// "pop" theme colors scales for dark mode\n' +
-					'$primary-dark-scale: nuitral.generate-color-scale(#ff337a);\n' +
-					'$secondary-dark-scale: nuitral.generate-color-scale(#00a3cc);\n' +
-					'$accent-dark-scale: nuitral.generate-color-scale(#ffd700);\n' +
-					'$error-dark-scale: nuitral.generate-color-scale(#ff6347);\n' +
-					'$success-dark-scale: nuitral.generate-color-scale(#28a745);\n' +
-					'$warning-dark-scale: nuitral.generate-color-scale(#ff7733);\n' +
-					'$info-dark-scale: nuitral.generate-color-scale(#006699);\n' +
-					'$neutral-dark-scale: nuitral.generate-color-scale(#a569bd);\n' +
-					'$background-dark-scale: nuitral.generate-color-scale(#1e1e1e);\n' +
-					'$surface-dark-scale: nuitral.generate-color-scale(#121212);\n' +
-					'\n' +
-					'// "pop" scale for dark mode\n' +
-					'$dark-mode: (\n' +
-					'\tprimary: $primary-dark-scale,\n' +
-					'\tsecondary: $secondary-dark-scale,\n' +
-					'\taccent: $accent-dark-scale,\n' +
-					'\tbackground: $background-dark-scale,\n' +
-					'\tsurface: $surface-dark-scale,\n' +
-					'\terror: $error-dark-scale,\n' +
-					'\tsuccess: $success-dark-scale,\n' +
-					'\twarning: $warning-dark-scale,\n' +
-					'\tinfo: $info-dark-scale,\n' +
-					'\tneutral: $neutral-dark-scale,\n' +
-					');\n' +
-					'\n' +
-					"// Mixin to generate new theme 'pop' with custom $light-mode and $dark-mode scales\n" +
-					"// The name of the theme is a parameter, in this case 'pop'\n" +
-					"@include nuitral.generate-theme($light-mode, $dark-mode, 'pop');"
-				}
+				code={`
+@use '@nuitral/theming/lib/scss/_index.scss' as nuitral;
+
+$light-mode: (
+        primary: #ff0054,
+        secondary: #00d8ff,
+        accent: #ffdc00,
+        error: #ff4136,
+        success: #2ecc40,
+        warning: #ff851b,
+        info: #0074d9,
+        neutral: #b10dc9,
+        background: #fdfefe,
+        surface: #ffffff
+);
+
+$dark-mode: (
+        primary: #ff337a,
+        secondary: #00a3cc,
+        accent: #ffd700,
+        error: #ff6347,
+        success: #28a745,
+        warning: #ff7733,
+        info: #006699,
+        neutral: #a569bd,
+        background: #1e1e1e,
+        surface: #121212
+);
+
+$theme-pop: nuitral.generate-theme((
+        theme-name: "pop",
+        scale-light: $light-mode,
+        scale-dark: $dark-mode,
+        variables: (
+                misc: (
+                        height-atoms: 30px,
+                        border-radius-atoms: 25px,
+                        corner-shape-atoms: circle,
+                        border-radius-molecules: 25px,
+                        corner-shape-molecules: circle
+\t\t\t\t)
+        )
+));
+
+@include nuitral.apply-theme($theme-pop);
+`}
 				language="scss"
 				fileName="index.scss"
-			></Snippet>
+			/>
+
 			<div className="mt-1rem mb-1rem">
 				It's also possible to generate only a color map for one theme, leaving
 				the light or dark mode as the default from Nuitral.
@@ -229,47 +191,33 @@ const Theming = () => {
 				</p>
 			</div>
 			<Snippet
-				code={
-					'// Import of nuitral theming scss\n' +
-					"@use '@nuitral/theming/dist/scss/index.scss' as nuitral;\n" +
-					'\n' +
-					'// Default theme\n' +
-					'@include nuitral.generate-theme(nuitral.$light-mode, nuitral.$dark-mode);\n' +
-					'\n' +
-					'// "pop" theme\n' +
-					'\n' +
-					'// "pop" theme colors scales\n' +
-					'$primary-light-scale: nuitral.generate-color-scale(#ff0054);\n' +
-					'$secondary-light-scale: nuitral.generate-color-scale(#00d8ff);\n' +
-					'$accent-light-scale: nuitral.generate-color-scale(#ffdc00);\n' +
-					'$error-light-scale: nuitral.generate-color-scale(#ff4136);\n' +
-					'$success-light-scale: nuitral.generate-color-scale(#2ecc40);\n' +
-					'$warning-light-scale: nuitral.generate-color-scale(#ff851b);\n' +
-					'$info-light-scale: nuitral.generate-color-scale(#0074d9);\n' +
-					'$neutral-light-scale: nuitral.generate-color-scale(#b10dc9);\n' +
-					'$background-light-scale: nuitral.generate-color-scale(#fdfefe);\n' +
-					'$surface-light-scale: nuitral.generate-color-scale(#ffffff);\n' +
-					'\n' +
-					'// "pop" colors scales for light mode\n' +
-					'$light-mode: (\n' +
-					'\tprimary: $primary-light-scale,\n' +
-					'\tsecondary: $secondary-light-scale,\n' +
-					'\taccent: $accent-light-scale,\n' +
-					'\tbackground: $background-light-scale,\n' +
-					'\tsurface: $surface-light-scale,\n' +
-					'\terror: $error-light-scale,\n' +
-					'\tsuccess: $success-light-scale,\n' +
-					'\twarning: $warning-light-scale,\n' +
-					'\tinfo: $info-light-scale,\n' +
-					'\tneutral: $neutral-light-scale,\n' +
-					');\n' +
-					'\n' +
-					"// Mixin to generate new theme 'pop' with colors scale $light-mode e default $dark-mode scale\n" +
-					"@include nuitral.generate-theme($light-mode, nuitral.$dark-mode, 'pop');"
-				}
+				code={`
+@use '@nuitral/theming/lib/scss/_index.scss' as nuitral;
+
+$light-mode: (
+        primary: #ff0054,
+        secondary: #00d8ff,
+        accent: #ffdc00,
+        error: #ff4136,
+        success: #2ecc40,
+        warning: #ff851b,
+        info: #0074d9,
+        neutral: #b10dc9,
+        background: #fdfefe,
+        surface: #ffffff
+);
+
+
+$theme-pop: nuitral.generate-theme((
+        theme-name: "pop",
+        scale-light: $light-mode,
+));
+
+@include nuitral.apply-theme($theme-pop);
+`}
 				language="scss"
 				fileName="index.scss"
-			></Snippet>
+			/>
 		</>
 	)
 }

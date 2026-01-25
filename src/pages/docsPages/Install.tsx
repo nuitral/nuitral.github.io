@@ -32,7 +32,7 @@ const Install = () => {
 			</div>
 			<div className="mb-1rem">Already included with the UI suite.</div>
 			<Snippet
-				code={`@use '@nuitral/theming/dist/scss/_index.scss' as nuitral;\n\n@include nuitral.generate-theme(\n  nuitral.$light-mode,\n  nuitral.$dark-mode\n);`}
+				code={`@use '@nuitral/theming/dist/scss/_index.scss' as nuitral;\n\n$theme-nuitral: nuitral.generate-theme();\n\n@include nuitral.apply-theme($theme-nuitral);`}
 				language="scss"
 				fileName={'index.scss'}
 			/>

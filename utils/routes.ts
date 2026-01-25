@@ -13,6 +13,8 @@ import IconCmp from '../src/pages/docsPages/IconCmp'
 import Input from '../src/pages/docsPages/Input'
 import Tabs from '../src/pages/docsPages/Tabs'
 import Layout from '../src/pages/docsPages/Layout.tsx'
+import Chip from '../src/pages/docsPages/Chip.tsx'
+
 
 import type { AppRoute } from '../models'
 
@@ -92,9 +94,15 @@ export const routes: AppRoute[] = [
 					},
 					{
 						name: 'docs.card',
-						label: 'Card',
+						label: 'Card (wip)',
 						path: 'card',
 						component: Card,
+					},
+					{
+						name: 'docs.chip',
+						label: 'Chip (wip)',
+						path: 'chip',
+						component: Chip,
 					},
 					{
 						name: 'docs.icon',

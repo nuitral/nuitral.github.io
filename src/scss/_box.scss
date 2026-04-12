@@ -1,4 +1,4 @@
-@use '@nuitral/theming/dist/scss/variables' as variables;
+@use '@nuitral/theming' as variables;
 .box {
 	padding: 1rem;
 	border: 1px solid variables.$primary-700;

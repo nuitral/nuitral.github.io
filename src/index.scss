@@ -1,4 +1,4 @@
-@use '../../theming/lib/scss/_index.scss' as nuitral;
+@use '@nuitral/theming' as nuitral;
 @use 'scss';
 
 $theme-nuitral: nuitral.generate-theme();

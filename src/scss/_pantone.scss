@@ -1,13 +1,13 @@
-@use '@nuitral/theming/dist/scss/variables' as variables;
+@use '@nuitral/theming' as variables;
 
 .pantone-card {
 	height: 7rem;
 	width: 6rem;
-	border: 2px solid variables.$surface-600;
+	border: 2px solid variables.$background;
 	border-radius: 10px;
 	box-sizing: border-box;
 
-	background: variables.$surface-600;
+	background: variables.$background;
 
 	.pantone-card-color {
 		border-radius: 8px 8px 0 0;

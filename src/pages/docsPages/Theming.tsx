@@ -131,7 +131,7 @@ const Theming = () => {
 			</div>
 			<Snippet
 				code={`
-@use '@nuitral/theming/lib/scss/_index.scss' as nuitral;
+@use '@nuitral/theming' as nuitral;
 
 $light-mode: (
         primary: #ff0054,
@@ -192,7 +192,7 @@ $theme-pop: nuitral.generate-theme((
 			</div>
 			<Snippet
 				code={`
-@use '@nuitral/theming/lib/scss/_index.scss' as nuitral;
+@use '@nuitral/theming' as nuitral;
 
 $light-mode: (
         primary: #ff0054,

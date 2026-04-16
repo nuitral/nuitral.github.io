@@ -32,10 +32,10 @@ const About = () => {
 				</div>
 				<Snippet
 					code={
-						"@use '@nuitral/theming/dist/scss/variables' as var;\n" +
+						"@use '@nuitral/theming' as nuitral;\n" +
 						'\n' +
 						'.custom-bg-class {\n' +
-						'\tbackground-color: var.$background-400;\n' +
+						'\tbackground-color: nuitral.$background-400;\n' +
 						'}'
 					}
 					language="scss"

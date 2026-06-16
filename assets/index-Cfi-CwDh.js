@@ -184,7 +184,7 @@ import { useNuitralTheming } from '@nuitral/vue-ui-suite'
 const { isDarkMode, manageDarkMode, manageTheme } = useNuitralTheming({
 	theme: 'nuitral',
 	darkMode: true,
-	id: 'demo-app',
+	rootId: 'demo-app',
 })
 <\/script>`,language:"ts",fileName:"VueComponent.vue"}),o.jsx(ae,{code:`<template>
 	<button @click="manageDarkMode">
@@ -196,6 +196,12 @@ const { isDarkMode, manageDarkMode, manageTheme } = useNuitralTheming({
 `,language:"html",fileName:"VueComponent.vue"})]})]}),o.jsx("div",{className:"mt-1rem mb-1rem",children:"To generate a new theme, simply select the desired base colors. Using the generate-color-scale function, color shades from 100 to 900 will be automatically generated."}),o.jsx("div",{className:"mt-1rem mb-1rem",children:"Simply associate your custom color scales with the $light-mode and $dark-mode maps, then pass them as parameters to the generate-theme mixin, where the theme name can be assigned."}),o.jsxs("div",{className:"hint mb-1rem mt-1rem",children:[o.jsxs("p",{children:["The chosen theme name will be used to manage theme switching through the ",o.jsx("b",{children:"useNuitralTheming"})," hook."]}),o.jsx("p",{children:"Choose it carefully, as the name must match exactly for the theming system to function correctly."})]}),o.jsx(ae,{code:`
 @use '@nuitral/theming' as nuitral;
 
+//Default theme
+$theme-nuitral: nuitral.generate-theme();
+
+@include nuitral.apply-theme($theme-nuitral);
+
+//Pop Theme
 $light-mode: (
         primary: #ff0054,
         secondary: #00d8ff,

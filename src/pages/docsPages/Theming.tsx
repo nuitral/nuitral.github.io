@@ -60,7 +60,7 @@ const Theming = () => {
 							'\tconst { manageDarkMode, isDarkMode, manageTheme } = useNuitralTheming({\n' +
 							"\t\ttheme: 'nuitral',\n" +
 							'\t\tdarkMode: true,\n' +
-							"\t\tid: 'demo-app',\n" +
+							"\t\trootId: 'demo-app',\n" +
 							'\t})\n' +
 							'\n' +
 							'\treturn <>\n' +

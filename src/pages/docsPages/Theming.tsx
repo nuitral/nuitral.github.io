@@ -85,7 +85,7 @@ const Theming = () => {
 							'const { isDarkMode, manageDarkMode, manageTheme } = useNuitralTheming({\n' +
 							"\ttheme: 'nuitral',\n" +
 							'\tdarkMode: true,\n' +
-							"\tid: 'demo-app',\n" +
+							"\trootId: 'demo-app',\n" +
 							'})\n' +
 							'</script>'
 						}
@@ -133,6 +133,12 @@ const Theming = () => {
 				code={`
 @use '@nuitral/theming' as nuitral;
 
+//Default theme
+$theme-nuitral: nuitral.generate-theme();
+
+@include nuitral.apply-theme($theme-nuitral);
+
+//Pop Theme
 $light-mode: (
         primary: #ff0054,
         secondary: #00d8ff,

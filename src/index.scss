@@ -1,6 +1,7 @@
 @use '@nuitral/theming' as nuitral;
 @use 'scss';
 
+//Default theme
 $theme-nuitral: nuitral.generate-theme();
 
 @include nuitral.apply-theme($theme-nuitral);
